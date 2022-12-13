@@ -18,7 +18,7 @@ const Header = () => {
             <nav>
                 <ul>
                     <li><Link to="/second">ALL PRODUCTS</Link></li>
-                    <li><Link to="/third">ABOUT SEEDRA</Link></li>
+                    <li><Link to="#">ABOUT SEEDRA</Link></li>
                     <li><Link to="#">OUR BLOG</Link></li>
                     <li><Link to="#">CONTACTS</Link></li>
                 </ul>
