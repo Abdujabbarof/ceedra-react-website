@@ -1,0 +1,48 @@
+import React, { useState, useEffect } from 'react'
+import './ThirdPage.scss'
+import cardImg from '../Images/cardimg.svg'
+import Details from '../components/Details'
+import axios from 'axios'
+import { useParams } from 'react-router-dom'
+
+const ThirdPage = () => {
+  const { id } = useParams()
+  const [userData, setUserData] = useState([])
+
+  const datas = () => {
+    axios.get('https://fakestoreapi.com/products/' + id)
+    .then((res) => {
+      setUserData(res.data)
+    })
+  }
+
+  useEffect(() => {
+    datas()
+  }, [])
+ 
+  return (
+    <section className='details'> 
+        <div className="container">
+            <div className="left">
+                <img src={userData.image} alt="" />
+            </div>
+            <div className="right">
+                <h1>{userData.title}</h1>
+
+                <h4>ID: {userData.id}</h4>
+
+                <div className="bottom">
+                    <div className="text">
+                        <span>$150.56</span>
+                        <h2>{userData.price}$</h2>
+                    </div>
+
+                    <button>Add to card</button>
+                </div>
+            </div>
+        </div>
+    </section>
+  )
+}
+
+export default ThirdPage
