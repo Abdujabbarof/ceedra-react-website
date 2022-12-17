@@ -5,9 +5,9 @@ import bg_bottom from '../Images/bg-bottom.svg'
 import right from '../Images/left-leaf.svg'
 import left from '../Images/left.svg'
 
-const Showcase = () => {
+const Showcase = ({darkMode}) => {
   return (
-    <section className='showcase'>
+    <section className={darkMode ? "showcase dark" : "showcase"}>
         <div className="container">
         <div className="left">
             <h1>SEEDRA Basil Seeds for Indoor and Outdoor Planting</h1>

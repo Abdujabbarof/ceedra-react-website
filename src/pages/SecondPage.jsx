@@ -4,9 +4,9 @@ import Categories from '../components/Categories'
 import SecondCards from '../components/SecondCards'
 import Inputs from '../components/Inputs'
 
-const SecondPage = () => {
+const SecondPage = ({darkMode}) => {
   return (
-    <div className='main'>
+    <div className={darkMode ? "main dark": "main"}>
       <Inputs />
       <div className="container">
         <Categories />

@@ -4,9 +4,9 @@ import bottom from '../Images/bottom-leaf.svg'
 import right from '../Images/right-leaf.svg'
 import nut from '../Images/nut.svg'
 
-const Seeds = () => {
+const Seeds = ({darkMode}) => {
   return (
-    <section className="seeds">
+    <section className={darkMode ? "seeds dark" : "seeds"}>
         <div className="container">
             <h3>We sell seeds </h3>
             <p>that always sprout and gardening supplies which never break</p>

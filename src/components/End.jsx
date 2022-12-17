@@ -1,8 +1,8 @@
 import React from 'react'
 
-const End = () => {
+const End = ({darkMode}) => {
   return (
-    <section className='end'>
+    <section className={darkMode ? "dark end" : "end"}>
         <div className="container">
             <div className="socials">
                 <a href="">

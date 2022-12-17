@@ -5,9 +5,9 @@ import cart from '../Images/cart.svg'
 import menu from '../Images/Menu.svg'
 import { Link } from 'react-router-dom'
 
-const Header = () => {
+const Header = ({darkMode}) => {
   return (
-    <header>
+    <header className={darkMode ? "dark" : "header"}>
         <div className="container">
             <input type="checkbox" id='checkbox' />
 
@@ -33,7 +33,7 @@ const Header = () => {
 
                     <div className="input">
                         <i class="fa-solid fa-magnifying-glass"></i>
-                        <input type="search" placeholder='Search' />
+                        <input className={darkMode ? "dark" : "header"} type="search" placeholder='Search' />
                     </div>
                 </form>
             </nav>

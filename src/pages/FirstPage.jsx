@@ -8,15 +8,15 @@ import Showcase from '../components/Showcase'
 
 import './FirstPage.scss'
 
-const FirstPage = () => {
+const FirstPage = ({darkMode}) => {
   return (
     <>
-      <Showcase />
-      <Seeds />
-      <Products />
-      <Blogs />
-      <Clients />
-      <Helps />
+      <Showcase darkMode={darkMode} />
+      <Seeds darkMode={darkMode} />
+      <Products darkMode={darkMode} />
+      <Blogs darkMode={darkMode} />
+      <Clients darkMode={darkMode} />
+      <Helps darkMode={darkMode} />
     </>
   )
 }
