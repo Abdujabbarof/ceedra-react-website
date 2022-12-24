@@ -1,6 +1,10 @@
 import React from 'react'
 
-const End = ({darkMode}) => {
+const End = ({darkMode, setToken}) => {
+    const handlerLogOut = () => {
+        setToken("")
+        localStorage.clear()
+    }
   return (
     <section className={darkMode ? "dark end" : "end"}>
         <div className="container">
@@ -12,7 +16,7 @@ const End = ({darkMode}) => {
                     <i class="fa-brands fa-facebook"></i>
                 </a>
             </div>
-            <p>All rights reserved</p>
+            <p onClick={handlerLogOut}>LOG OUT</p>
         </div>
     </section>
   )
